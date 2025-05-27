@@ -1,0 +1,13 @@
+langchain_core
+python-dotenv
+streamlit
+langchain_community
+langserve
+requests
+python-dateutil
+spacy
+speechrecognition
+Pillow
+streamlit-lottie
+mysql-connector-python
+reportlab

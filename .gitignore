@@ -1,0 +1,29 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# Streamlit cache
+.streamlit/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# PDF outputs
+*.pdf
+
+# Ignore this if you export MySQL dump files (optional)
+*.sql

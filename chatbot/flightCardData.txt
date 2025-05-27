@@ -1,0 +1,190 @@
+CITY_TO_IATA = {
+    # North America
+    "New York": "JFK", "Los Angeles": "LAX", "Chicago": "ORD", "Toronto": "YYZ", 
+    "Vancouver": "YVR", "Montreal": "YUL", "San Francisco": "SFO", "Las Vegas": "LAS",
+    "Seattle": "SEA", "Dallas": "DFW", "Houston": "IAH", "Miami": "MIA",
+    "Atlanta": "ATL", "Boston": "BOS", "Washington": "IAD", "Philadelphia": "PHL",
+    "Phoenix": "PHX", "Denver": "DEN", "Orlando": "MCO", "Mexico City": "MEX",
+    "Cancun": "CUN", "Guadalajara": "GDL", "Panama City": "PTY", "San Jose": "SJO",
+    "Ontario": "ONT","San Diego": "SAN", "San Jose (CA)": "SJC", "Sacramento": "SMF", "Oakland": "OAK",
+    "Minneapolis": "MSP", "Detroit": "DTW", "Charlotte": "CLT", "Tampa": "TPA",
+    "Fort Lauderdale": "FLL", "Baltimore": "BWI", "Salt Lake City": "SLC",
+    "Nashville": "BNA", "St. Louis": "STL", "Kansas City": "MCI", "Cleveland": "CLE",
+    "Pittsburgh": "PIT", "Cincinnati": "CVG", "Indianapolis": "IND", "Columbus": "CMH",
+    "Austin": "AUS", "San Antonio": "SAT", "New Orleans": "MSY", "Raleigh": "RDU",
+    "Portland": "PDX", "Honolulu": "HNL", "Anchorage": "ANC",
+    
+    # Europe
+    "London": "LHR", "Paris": "CDG", "Frankfurt": "FRA", "Amsterdam": "AMS",
+    "Madrid": "MAD", "Barcelona": "BCN", "Rome": "FCO", "Milan": "MXP",
+    "Berlin": "BER", "Munich": "MUC", "Brussels": "BRU", "Vienna": "VIE",
+    "Zurich": "ZRH", "Geneva": "GVA", "Dublin": "DUB", "Lisbon": "LIS",
+    "Oslo": "OSL", "Stockholm": "ARN", "Copenhagen": "CPH", "Helsinki": "HEL",
+    "Warsaw": "WAW", "Prague": "PRG", "Budapest": "BUD", "Athens": "ATH",
+    "Istanbul": "IST", "Moscow": "SVO", "St. Petersburg": "LED", "Dubrovnik": "DBV",
+    
+    # Asia
+    "Tokyo": "HND", "Osaka": "KIX", "Seoul": "ICN", "Beijing": "PEK",
+    "Shanghai": "PVG", "Hong Kong": "HKG", "Taipei": "TPE", "Bangkok": "BKK",
+    "Singapore": "SIN", "Kuala Lumpur": "KUL", "Jakarta": "CGK", "Manila": "MNL",
+    "Hanoi": "HAN", "Ho Chi Minh City": "SGN", "Phnom Penh": "PNH", "Vientiane": "VTE",
+    "Yangon": "RGN", "Dhaka": "DAC", "Kathmandu": "KTM", "Colombo": "CMB",
+    "Mumbai": "BOM", "Delhi": "DEL", "Banglore": "BLR", "Chennai": "MAA",
+    "Hyderabad": "HYD", "Kolkata": "CCU", "Ahmedabad": "AMD", "Pune": "PNQ",
+    "Goa": "GOI", "Kochi": "COK", "Thiruvananthapuram": "TRV", "Jaipur": "JAI",
+    "Amritsar": "ATQ", "Lucknow": "LKO", "Varanasi": "VNS", "Indore": "IDR", "Bhopal": "BHO", "Nagpur": "NAG",
+    "Coimbatore": "CJB", "Tiruchirappalli": "TRZ", "Madurai": "IXM", "Mangalore": "IXE", "Calicut": "CCJ", "Kannur": "CNN",
+    "Visakhapatnam": "VTZ", "Vijayawada": "VGA", "Tirupati": "TIR", "Rajahmundry": "RJA", "Guwahati": "GAU", "Patna": "PAT",
+    "Ranchi": "IXR", "Raipur": "RPR", "Bhubaneswar": "BBI", "Jodhpur": "JDH", "Udaipur": "UDR", "Dehradun": "DED",
+    "Shimla": "SLV", "Leh": "IXL", "Srinagar": "SXR", "Agartala": "IXA", "Aizawl": "AJL", "Imphal": "IMF",
+    "Dimapur": "DMU", "Shillong": "SHL", "Silchar": "IXS", "Jorhat": "JRH", "Tezpur": "TEZ", "Port Blair": "IXZ",
+    "Durgapur": "RDP", "Shirdi": "SAG", "Kishangarh (Ajmer)": "KQH", "Diu": "DIU", "Jamnagar": "JGA", "Surat": "STV",
+    "Vadodara": "BDQ", "Rajkot": "RAJ", "Bhavnagar": "BHU", "Kandla": "IXY", "Jalgaon": "JLG", "Kolhapur": "KLH",
+    "Aurangabad": "IXU", "Nashik": "ISK", "Nanded": "NDC", "Latur": "LTU", "Sindhudurg": "SDW", "Belgaum": "IXG",
+    "Hubli": "HBX", "Mysore": "MYQ", "Kalaburagi": "GBI", "Bidar": "IXX",
+    
+    # Middle East
+    "Dubai": "DXB", "Abu Dhabi": "AUH", "Doha": "DOH", "Riyadh": "RUH",
+    "Jeddah": "JED", "Muscat": "MCT", "Kuwait City": "KWI", "Beirut": "BEY",
+    "Tel Aviv": "TLV", "Amman": "AMM", "Bahrain": "BAH", "Sharjah": "SHJ",
+    
+    # Africa
+    "Cairo": "CAI", "Casablanca": "CMN", "Johannesburg": "JNB", "Cape Town": "CPT",
+    "Nairobi": "NBO", "Addis Ababa": "ADD", "Lagos": "LOS", "Accra": "ACC",
+    "Dakar": "DKR", "Tunis": "TUN", "Algiers": "ALG", "Kigali": "KGL",
+    
+    # Oceania
+    "Sydney": "SYD", "Melbourne": "MEL", "Brisbane": "BNE", "Perth": "PER",
+    "Adelaide": "ADL", "Auckland": "AKL", "Christchurch": "CHC", "Wellington": "WLG",
+    "Fiji": "NAN", "Honolulu": "HNL", "Papeete": "PPT", "Guam": "GUM",
+    
+    # South America
+    "São Paulo": "GRU", "Rio de Janeiro": "GIG", "Buenos Aires": "EZE",
+    "Santiago": "SCL", "Lima": "LIM", "Bogotá": "BOG", "Quito": "UIO",
+    "Guayaquil": "GYE", "Caracas": "CCS", "Montevideo": "MVD", "Asunción": "ASU"
+}
+
+
+
+
+AIRLINE_NAME_MAPPING = {
+    # Major Global Airlines
+    "VS": "Virgin Atlantic",
+    "AA": "American Airlines", "DL": "Delta Air Lines", "UA": "United Airlines",
+    "BA": "British Airways", "AF": "Air France", "LH": "Lufthansa",
+    "EK": "Emirates", "QR": "Qatar Airways", "EY": "Etihad Airways",
+    "SQ": "Singapore Airlines", "CX": "Cathay Pacific", "QF": "Qantas",
+    "JL": "Japan Airlines", "NH": "All Nippon Airways", "KE": "Korean Air",
+    "OZ": "Asiana Airlines", "CA": "Air China", "MU": "China Eastern Airlines",
+    "CZ": "China Southern Airlines", "TK": "Turkish Airlines", "SU": "Aeroflot",
+    "SV": "Saudi Arabian Airlines", "ET": "Ethiopian Airlines", "SA": "South African Airways",
+    
+    # European Airlines
+    "KL": "KLM", "IB": "Iberia", "AZ": "Alitalia", "SK": "SAS Scandinavian Airlines",
+    "LX": "Swiss International Air Lines", "OS": "Austrian Airlines", "LO": "LOT Polish Airlines",
+    "TP": "TAP Portugal", "FI": "Icelandair", "AY": "Finnair", "DY": "Norwegian Air Shuttle",
+    "FR": "Ryanair", "U2": "easyJet", "W6": "Wizz Air", "BT": "Air Baltic",
+    
+    # Asian Airlines
+    "AI": "Air India", "6E": "IndiGo", "SG": "SpiceJet", "UK": "Vistara",
+    "QP": "Akasa Air", "G8": "Go First", "9W": "Jet Airways", "I5": "AirAsia India",
+    "TG": "Thai Airways", "MH": "Malaysia Airlines", "GA": "Garuda Indonesia",
+    "PR": "Philippine Airlines", "VN": "Vietnam Airlines", "BR": "EVA Air",
+    "CI": "China Airlines", "PK": "Pakistan International Airlines", "UL": "SriLankan Airlines",
+    "BG": "Biman Bangladesh Airlines", "RA": "Nepal Airlines", "OM": "MIAT Mongolian Airlines",
+    
+    # Middle Eastern Airlines
+    "GF": "Gulf Air", "KU": "Kuwait Airways", "RJ": "Royal Jordanian",
+    "ME": "Middle East Airlines", "MS": "EgyptAir", "WY": "Oman Air",
+    "FZ": "Flydubai", "J9": "Jazeera Airways", "XY": "Flynas",
+    
+    # African Airlines
+    "KQ": "Kenya Airways", "AT": "Royal Air Maroc", "WB": "RwandAir",
+    "ET": "Ethiopian Airlines", "SA": "South African Airways", "TA": "Tunisair",
+    
+    # North American Airlines
+    "AC": "Air Canada", "WS": "WestJet", "AS": "Alaska Airlines",
+    "B6": "JetBlue Airways", "F9": "Frontier Airlines", "NK": "Spirit Airlines",
+    "HA": "Hawaiian Airlines", "AM": "Aeroméxico", "CM": "Copa Airlines",
+    
+    # South American Airlines
+    "JJ": "LATAM Brasil", "LA": "LATAM Chile", "AV": "Avianca",
+    "AD": "Azul Brazilian Airlines", "G3": "Gol Transportes Aéreos", "AR": "Aerolíneas Argentinas",
+    
+    # Oceania Airlines
+    "NZ": "Air New Zealand", "VA": "Virgin Australia", "FJ": "Fiji Airways",
+    "PX": "Air Niugini", "SB": "Aircalin"
+}
+
+
+
+
+AIRPORT_TO_COUNTRY = {
+    # North America
+    "JFK": "USA", "LAX": "USA", "ORD": "USA", "DFW": "USA", "ATL": "USA",
+    "SFO": "USA", "SEA": "USA", "MIA": "USA", "LAS": "USA", "DEN": "USA",
+    "YYZ": "Canada", "YVR": "Canada", "YUL": "Canada", "YWG": "Canada",
+    "MEX": "Mexico", "CUN": "Mexico", "GDL": "Mexico", "PTY": "Panama",
+    "ONT": "USA", "SAN": "USA", "SJC": "USA", "SMF": "USA", "OAK": "USA", 
+    "MSP": "USA", "DTW": "USA", "CLT": "USA", "TPA": "USA", "FLL": "USA", 
+    "BWI": "USA", "SLC": "USA", "BNA": "USA", "STL": "USA", "MCI": "USA", 
+    "CLE": "USA", "PIT": "USA", "CVG": "USA", "IND": "USA", "CMH": "USA", 
+    "AUS": "USA", "SAT": "USA", "MSY": "USA", "RDU": "USA", "PDX": "USA", 
+    "HNL": "USA", "ANC": "USA",
+    
+    # Europe
+    "LHR": "UK", "LGW": "UK", "MAN": "UK", "EDI": "UK", "CDG": "France",
+    "ORY": "France", "NCE": "France", "FRA": "Germany", "MUC": "Germany",
+    "TXL": "Germany", "AMS": "Netherlands", "EIN": "Netherlands", "MAD": "Spain",
+    "BCN": "Spain", "AGP": "Spain", "FCO": "Italy", "MXP": "Italy",
+    "LIN": "Italy", "ZRH": "Switzerland", "GVA": "Switzerland", "BRN": "Switzerland",
+    "VIE": "Austria", "BRU": "Belgium", "CPH": "Denmark", "ARN": "Sweden",
+    "OSL": "Norway", "HEL": "Finland", "KEF": "Iceland", "DUB": "Ireland",
+    "WAW": "Poland", "PRG": "Czech Republic", "BUD": "Hungary", "IST": "Turkey",
+    "SAW": "Turkey", "SVO": "Russia", "LED": "Russia", "KBP": "Ukraine",
+    
+    # Asia
+    "HND": "Japan", "NRT": "Japan", "KIX": "Japan", "ICN": "South Korea",
+    "GMP": "South Korea", "PEK": "China", "PVG": "China", "CAN": "China",
+    "HKG": "Hong Kong", "TPE": "Taiwan", "BKK": "Thailand", "DMK": "Thailand",
+    "SIN": "Singapore", "KUL": "Malaysia", "CGK": "Indonesia", "DPS": "Indonesia",
+    "MNL": "Philippines", "CRK": "Philippines", "HAN": "Vietnam", "SGN": "Vietnam",
+    "PNH": "Cambodia", "RGN": "Myanmar", "DAC": "Bangladesh", "KTM": "Nepal",
+    "CMB": "Sri Lanka", "MLE": "Maldives", "BOM": "India", "DEL": "India",
+    "BLR": "India", "MAA": "India", "HYD": "India", "CCU": "India",
+    "ATQ": "India", "LKO": "India", "VNS": "India", "IDR": "India", "BHO": "India", 
+    "NAG": "India", "CJB": "India", "TRZ": "India", "IXM": "India", "IXE": "India", 
+    "CCJ": "India", "CNN": "India", "VTZ": "India", "VGA": "India", "TIR": "India", 
+    "RJA": "India", "GAU": "India", "PAT": "India", "IXR": "India", "RPR": "India", 
+    "BBI": "India", "JDH": "India", "UDR": "India", "DED": "India", "SLV": "India", 
+    "IXL": "India", "SXR": "India", "IXA": "India", "AJL": "India", "IMF": "India", 
+    "DMU": "India", "SHL": "India", "IXS": "India", "JRH": "India", "TEZ": "India", 
+    "IXZ": "India", "RDP": "India", "SAG": "India", "KQH": "India", "DIU": "India", 
+    "JGA": "India", "STV": "India", "BDQ": "India", "RAJ": "India", "BHU": "India", 
+    "IXY": "India", "JLG": "India", "KLH": "India", "IXU": "India", "ISK": "India", 
+    "NDC": "India", "LTU": "India", "SDW": "India", "IXG": "India", "HBX": "India", 
+    "MYQ": "India", "GBI": "India", "IXX": "India"
+    
+    # Middle East
+    "DXB": "UAE", "AUH": "UAE", "SHJ": "UAE", "DOH": "Qatar", "BAH": "Bahrain",
+    "RUH": "Saudi Arabia", "JED": "Saudi Arabia", "MED": "Saudi Arabia",
+    "AMM": "Jordan", "TLV": "Israel", "BEY": "Lebanon", "KWI": "Kuwait",
+    "MCT": "Oman", "SYZ": "Iran", "THR": "Iran",
+    
+    # Africa
+    "CAI": "Egypt", "HRG": "Egypt", "SSH": "Egypt", "CMN": "Morocco",
+    "RAK": "Morocco", "TUN": "Tunisia", "NBE": "Tunisia", "ALG": "Algeria",
+    "JNB": "South Africa", "CPT": "South Africa", "DUR": "South Africa",
+    "NBO": "Kenya", "MBA": "Kenya", "ADD": "Ethiopia", "LOS": "Nigeria",
+    "ACC": "Ghana", "DKR": "Senegal", "KGL": "Rwanda", "EBB": "Uganda",
+    
+    # Oceania
+    "SYD": "Australia", "MEL": "Australia", "BNE": "Australia", "PER": "Australia",
+    "ADL": "Australia", "AKL": "New Zealand", "CHC": "New Zealand", "WLG": "New Zealand",
+    "NAN": "Fiji", "HNL": "USA", "PPT": "French Polynesia", "GUM": "Guam",
+    
+    # South America
+    "GRU": "Brazil", "GIG": "Brazil", "SSA": "Brazil", "EZE": "Argentina",
+    "AEP": "Argentina", "SCL": "Chile", "LIM": "Peru", "BOG": "Colombia",
+    "UIO": "Ecuador", "GYE": "Ecuador", "CCS": "Venezuela", "MVD": "Uruguay"
+}

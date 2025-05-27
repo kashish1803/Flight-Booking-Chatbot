@@ -1,0 +1,129 @@
+Here are some general input queries similar to "Book a flight" that users might ask at the beginning:
+
+"Find flights"
+"Search for flights"
+"I need a flight"
+"Look up flights"
+"Help me book a flight"
+"Reserve a flight"
+"Show available flights"
+"Check flight options"
+"Get me a plane ticket"
+"Find me a ticket"
+"I want to fly somewhere"
+"Flight booking options"
+"Show me travel options"
+"Help me plan a trip"
+"Find airline tickets"
+
+Chatbot can ask:
+Please provide origin city, destination city and departure date.
+[For ex. I want to travel from Mumbai (origin) to Delhi (destination) on February 20 (departure date).]
+
+
+If the user only provides the origin city without specifying the destination or departure date, their queries might look like this:
+
+"Find flights from Mumbai."
+"I want to fly out of Delhi."
+"Show me flights departing from Bangalore."
+"What are my options from Chennai?"
+"Find me a flight leaving from Hyderabad."
+"Search flights from New York to anywhere."
+"Show me available destinations from London."
+"Where can I fly to from Paris?"
+"Check flights departing from Tokyo."
+"Help me find flights leaving from Los Angeles."
+
+Chatbot can ask:
+Please provide the destination city and departure date.
+
+
+Here are some user queries where only the destination is provided, without the origin city or departure date:
+
+"Find me flights to London."
+"I want to go to Paris."
+"Show me flights available to Tokyo."
+"Search for flights to Los Angeles."
+"Book me a ticket to San Francisco."
+"Check flight options to Dubai."
+"Help me find a flight to Sydney."
+"What are the cheapest flights to Bangkok?"
+"Show me the fastest way to reach New York."
+"Find the best flight deals to Singapore."
+
+Chatbot can ask:
+Please provide the origin city and departure date.
+
+
+Here are some user queries where only the departure date is provided, without the origin or destination city:
+
+"Find me flights for March 15."
+"I need to travel on April 10."
+"Show me available flights for next Friday."
+"Search for flights on July 1."
+"Book a flight for tomorrow."
+"What flights are available this weekend?"
+"I want to fly out on December 20."
+"Check flights for next Monday."
+"Find the best flight deals for August 5."
+"Show flights departing on November 25."
+
+Chatbot can ask:
+Please provide the origin and destination city.
+
+
+Here are some user queries where only the origin and destination are provided, without the departure date:
+
+"Find flights from Mumbai to London."
+"I want to travel from Delhi to New York."
+"Show me flights from Bangalore to Paris."
+"Search for flights from Chennai to Dubai."
+"Book a ticket from Hyderabad to Tokyo."
+"Check flight options from Kolkata to Los Angeles."
+"Help me find flights from Pune to San Francisco."
+"What are the cheapest flights from Ahmedabad to Sydney?"
+"Show me direct flights from Goa to Bangkok."
+"Find the best flight deals from Jaipur to Singapore."
+
+Since the user hasn’t provided a departure date, chatbot can ask:
+"When would you like to travel?"
+"Do you need a one-way or round-trip ticket?"
+"Are your dates flexible for cheaper options?"
+
+
+Here are some user queries where only the origin city and departure date are provided, without the destination:
+
+"Find flights from Mumbai on March 10."
+"I want to fly out of Delhi on April 5."
+"Show me available flights from Bangalore next Friday."
+"Search for flights from Chennai on July 1."
+"Book a flight from Hyderabad for tomorrow."
+"Check flight options from Kolkata this weekend."
+"Help me find flights from Pune on December 20."
+"What are the cheapest flights from Ahmedabad next Monday?"
+"Show me flight destinations from Goa on November 25."
+"Find the best flight deals from Jaipur on August 5."
+
+Since the user hasn’t provided a destination, chatbot can ask:
+"Where would you like to travel to?"
+"Do you have any preferred destinations?"
+"Are you looking for the cheapest or fastest options?"
+
+
+Here are some user queries where only the destination city and departure date are provided, without the origin:
+
+"Find flights to London on March 10."
+"I want to fly to Paris on April 5."
+"Show me available flights to Tokyo next Friday."
+"Search for flights to Los Angeles on July 1."
+"Book a flight to Dubai for tomorrow."
+"Check flight options to Sydney this weekend."
+"Help me find flights to Bangkok on December 20."
+"What are the cheapest flights to New York next Monday?"
+"Show me flight options to Singapore on November 25."
+"Find the best flight deals to Rome on August 5."
+
+Since the user hasn’t provided an origin city, chatbot can ask:
+"Where will you be flying from?"
+"Which city are you departing from?"
+"Are you looking for flights from your current location?"
