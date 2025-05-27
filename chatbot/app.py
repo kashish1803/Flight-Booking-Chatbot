@@ -1,5 +1,3 @@
-#LANGCHAIN_API_KEY="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"
-#LANGCHAIN_PROJECT="GeneralChatbot"
 # Import necessary libraries
 import streamlit as st
 import requests
